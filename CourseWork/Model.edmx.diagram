@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="09dda22201584891b8c3981a54379d3d" Name="Diagram1">
+        <EntityTypeShape EntityType="Course_workModel.Color" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Course_workModel.Form_Factor" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Course_workModel.Material" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Course_workModel.Reservation" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Course_workModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Course_workModel.Table" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Course_workModel.Table_Reservation" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="Course_workModel.FK__Table__color_id__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="Course_workModel.FK__Table__form_id__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="Course_workModel.FK__Table__material___3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="Course_workModel.FK__Table_Res__reser__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="Course_workModel.FK__Table_Res__table__440B1D61" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
