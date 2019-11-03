@@ -1,0 +1,1 @@
+sqlcmd -S WIN-DS5780BD4NC -i SQLQuery_backup.sql

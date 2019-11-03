@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Gerasimov_course_workModelStoreContainer" CdmEntityContainer="CourseWorkEntities">
+    <EntitySetMapping Name="Color">
+      <EntityTypeMapping TypeName="Gerasimov_course_workModel.Color">
+        <MappingFragment StoreEntitySet="Color">
+          <ScalarProperty Name="id_color" ColumnName="id_color" />
+          <ScalarProperty Name="color_name" ColumnName="color_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Form_Factor">
+      <EntityTypeMapping TypeName="Gerasimov_course_workModel.Form_Factor">
+        <MappingFragment StoreEntitySet="Form_Factor">
+          <ScalarProperty Name="id_form_factor" ColumnName="id_form_factor" />
+          <ScalarProperty Name="form_name" ColumnName="form_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Material">
+      <EntityTypeMapping TypeName="Gerasimov_course_workModel.Material">
+        <MappingFragment StoreEntitySet="Material">
+          <ScalarProperty Name="id_material" ColumnName="id_material" />
+          <ScalarProperty Name="material_name" ColumnName="material_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservation">
+      <EntityTypeMapping TypeName="Gerasimov_course_workModel.Reservation">
+        <MappingFragment StoreEntitySet="Reservation">
+          <ScalarProperty Name="id_reservation" ColumnName="id_reservation" />
+          <ScalarProperty Name="reservation_number" ColumnName="reservation_number" />
+          <ScalarProperty Name="client_fname" ColumnName="client_fname" />
+          <ScalarProperty Name="client_lname" ColumnName="client_lname" />
+          <ScalarProperty Name="client_phone" ColumnName="client_phone" />
+          <ScalarProperty Name="time_of_reservation" ColumnName="time_of_reservation" />
+          <ScalarProperty Name="date_of_reservation" ColumnName="date_of_reservation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table">
+      <EntityTypeMapping TypeName="Gerasimov_course_workModel.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="id_table" ColumnName="id_table" />
+          <ScalarProperty Name="table_number" ColumnName="table_number" />
+          <ScalarProperty Name="number_of_seats" ColumnName="number_of_seats" />
+          <ScalarProperty Name="color_id" ColumnName="color_id" />
+          <ScalarProperty Name="material_id" ColumnName="material_id" />
+          <ScalarProperty Name="form_id" ColumnName="form_id" />
+          <ScalarProperty Name="img" ColumnName="img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_Reservation">
+      <EntityTypeMapping TypeName="Gerasimov_course_workModel.Table_Reservation">
+        <MappingFragment StoreEntitySet="Table_Reservation">
+          <ScalarProperty Name="id_table_reservation" ColumnName="id_table_reservation" />
+          <ScalarProperty Name="table_id" ColumnName="table_id" />
+          <ScalarProperty Name="reservation_id" ColumnName="reservation_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="TableInfoOnDate" FunctionName="Gerasimov_course_workModel.Store.TableInfoOnDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gerasimov_course_workModel.TableInfoOnDate_Result">
+          <ScalarProperty Name="reservation_number" ColumnName="reservation_number" />
+          <ScalarProperty Name="client_fname" ColumnName="client_fname" />
+          <ScalarProperty Name="client_lname" ColumnName="client_lname" />
+          <ScalarProperty Name="client_phone" ColumnName="client_phone" />
+          <ScalarProperty Name="date_of_reservation" ColumnName="date_of_reservation" />
+          <ScalarProperty Name="time_of_reservation" ColumnName="time_of_reservation" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CallAmounFunction" FunctionName="Gerasimov_course_workModel.Store.CallAmounFunction" />
+  </EntityContainerMapping>
+</Mapping>

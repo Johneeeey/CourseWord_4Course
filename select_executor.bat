@@ -1,0 +1,1 @@
+sqlcmd -S WIN-DS5780BD4NC -d Gerasimov_course_work -Q "select r.client_fname, r.client_lname, r.time_of_reservation, r.date_of_reservation from Table_Reservation tr join [Table] t on tr.table_id=t.id_table join Reservation r on tr.reservation_id=r.id_reservation"

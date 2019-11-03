@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Gerasimov_course_workModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="id_color" />
+    </Key>
+    <Property Name="id_color" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="color_name" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Form_Factor">
+    <Key>
+      <PropertyRef Name="id_form_factor" />
+    </Key>
+    <Property Name="id_form_factor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="form_name" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Material">
+    <Key>
+      <PropertyRef Name="id_material" />
+    </Key>
+    <Property Name="id_material" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="material_name" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="id_reservation" />
+    </Key>
+    <Property Name="id_reservation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="reservation_number" Type="int" Nullable="false" />
+    <Property Name="client_fname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="client_lname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="client_phone" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="time_of_reservation" Type="time" Precision="7" Nullable="false" />
+    <Property Name="date_of_reservation" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="id_table" />
+    </Key>
+    <Property Name="id_table" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="table_number" Type="int" Nullable="false" />
+    <Property Name="number_of_seats" Type="int" Nullable="false" />
+    <Property Name="color_id" Type="int" Nullable="false" />
+    <Property Name="material_id" Type="int" Nullable="false" />
+    <Property Name="form_id" Type="int" Nullable="false" />
+    <Property Name="img" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table_Reservation">
+    <Key>
+      <PropertyRef Name="id_table_reservation" />
+    </Key>
+    <Property Name="id_table_reservation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="table_id" Type="int" Nullable="false" />
+    <Property Name="reservation_id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Table__color_id__3E52440B">
+    <End Role="Color" Type="Self.Color" Multiplicity="1" />
+    <End Role="Table" Type="Self.Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="id_color" />
+      </Principal>
+      <Dependent Role="Table">
+        <PropertyRef Name="color_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Table__form_id__403A8C7D">
+    <End Role="Form_Factor" Type="Self.Form_Factor" Multiplicity="1" />
+    <End Role="Table" Type="Self.Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Form_Factor">
+        <PropertyRef Name="id_form_factor" />
+      </Principal>
+      <Dependent Role="Table">
+        <PropertyRef Name="form_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Table__material___3F466844">
+    <End Role="Material" Type="Self.Material" Multiplicity="1" />
+    <End Role="Table" Type="Self.Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material">
+        <PropertyRef Name="id_material" />
+      </Principal>
+      <Dependent Role="Table">
+        <PropertyRef Name="material_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Table_Res__reser__46E78A0C">
+    <End Role="Reservation" Type="Self.Reservation" Multiplicity="1" />
+    <End Role="Table_Reservation" Type="Self.Table_Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reservation">
+        <PropertyRef Name="id_reservation" />
+      </Principal>
+      <Dependent Role="Table_Reservation">
+        <PropertyRef Name="reservation_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Table_Res__table__45F365D3">
+    <End Role="Table" Type="Self.Table" Multiplicity="1" />
+    <End Role="Table_Reservation" Type="Self.Table_Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table">
+        <PropertyRef Name="id_table" />
+      </Principal>
+      <Dependent Role="Table_Reservation">
+        <PropertyRef Name="table_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="AmountReservedTableOnDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="CallAmounFunction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="TableInfoOnDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTable" Type="int" Mode="In" />
+    <Parameter Name="date" Type="date" Mode="In" />
+  </Function>
+  <EntityContainer Name="Gerasimov_course_workModelStoreContainer">
+    <EntitySet Name="Color" EntityType="Self.Color" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Form_Factor" EntityType="Self.Form_Factor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Material" EntityType="Self.Material" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_Reservation" EntityType="Self.Table_Reservation" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Table__color_id__3E52440B" Association="Self.FK__Table__color_id__3E52440B">
+      <End Role="Color" EntitySet="Color" />
+      <End Role="Table" EntitySet="Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Table__form_id__403A8C7D" Association="Self.FK__Table__form_id__403A8C7D">
+      <End Role="Form_Factor" EntitySet="Form_Factor" />
+      <End Role="Table" EntitySet="Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Table__material___3F466844" Association="Self.FK__Table__material___3F466844">
+      <End Role="Material" EntitySet="Material" />
+      <End Role="Table" EntitySet="Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Table_Res__reser__46E78A0C" Association="Self.FK__Table_Res__reser__46E78A0C">
+      <End Role="Reservation" EntitySet="Reservation" />
+      <End Role="Table_Reservation" EntitySet="Table_Reservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Table_Res__table__45F365D3" Association="Self.FK__Table_Res__table__45F365D3">
+      <End Role="Table" EntitySet="Table" />
+      <End Role="Table_Reservation" EntitySet="Table_Reservation" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

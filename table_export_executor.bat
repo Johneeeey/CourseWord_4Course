@@ -1,0 +1,1 @@
+sqlcmd -S WIN-DS5780BD4NC -d Gerasimov_course_work -Q "select * from [Table]" -o "Table_Export.csv" -s";" -w 700
