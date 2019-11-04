@@ -190,7 +190,7 @@
             this.Controls.Add(this.textBoxReservNum);
             this.Controls.Add(this.labelReservNum);
             this.Name = "ReservationForm";
-            this.Text = "ReservationForm";
+            this.Text = "Бронирование";
             this.ResumeLayout(false);
             this.PerformLayout();
 

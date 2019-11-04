@@ -39,9 +39,9 @@
             this.textBoxDate = new System.Windows.Forms.TextBox();
             this.textBoxTableNum = new System.Windows.Forms.TextBox();
             this.groupBoxAmountReservation = new System.Windows.Forms.GroupBox();
+            this.buttonShowAmount = new System.Windows.Forms.Button();
             this.labelDateForAmount = new System.Windows.Forms.Label();
             this.textBoxDateForAmount = new System.Windows.Forms.TextBox();
-            this.buttonShowAmount = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTables)).BeginInit();
             this.groupBoxTableInfoOnDate.SuspendLayout();
@@ -156,6 +156,16 @@
             this.groupBoxAmountReservation.TabStop = false;
             this.groupBoxAmountReservation.Text = "Сколько столиков забронировано n-ого числа";
             // 
+            // buttonShowAmount
+            // 
+            this.buttonShowAmount.Location = new System.Drawing.Point(443, 14);
+            this.buttonShowAmount.Name = "buttonShowAmount";
+            this.buttonShowAmount.Size = new System.Drawing.Size(92, 28);
+            this.buttonShowAmount.TabIndex = 5;
+            this.buttonShowAmount.Text = "Посмотреть";
+            this.buttonShowAmount.UseVisualStyleBackColor = true;
+            this.buttonShowAmount.Click += new System.EventHandler(this.buttonShowAmount_Click);
+            // 
             // labelDateForAmount
             // 
             this.labelDateForAmount.AutoSize = true;
@@ -172,16 +182,6 @@
             this.textBoxDateForAmount.Size = new System.Drawing.Size(100, 20);
             this.textBoxDateForAmount.TabIndex = 5;
             // 
-            // buttonShowAmount
-            // 
-            this.buttonShowAmount.Location = new System.Drawing.Point(443, 14);
-            this.buttonShowAmount.Name = "buttonShowAmount";
-            this.buttonShowAmount.Size = new System.Drawing.Size(92, 28);
-            this.buttonShowAmount.TabIndex = 5;
-            this.buttonShowAmount.Text = "Посмотреть";
-            this.buttonShowAmount.UseVisualStyleBackColor = true;
-            this.buttonShowAmount.Click += new System.EventHandler(this.buttonShowAmount_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,7 +194,7 @@
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.pictureBox);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "Главная";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTables)).EndInit();
             this.groupBoxTableInfoOnDate.ResumeLayout(false);

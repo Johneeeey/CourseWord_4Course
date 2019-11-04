@@ -96,3 +96,21 @@ D:\Курсовая\CourseWork\CourseWork\obj\Debug\CourseWork.ReservationForm.r
 G:\КИТП 4 курс\Курсовая\CourseWork\CourseWork\obj\Debug\CourseWork.ReservationForm.resources
 G:\КИТП 4 курс\Курсовая\CourseWork\CourseWork\obj\Debug\CourseWork.SecondaryForm.resources
 G:\КИТП 4 курс\Курсовая\CourseWork\CourseWork\obj\Debug\CourseWork.TableInfoOnDateForm.resources
+D:\CourseWord_4Course\CourseWork\CourseWork\bin\Debug\CourseWork.exe.config
+D:\CourseWord_4Course\CourseWork\CourseWork\bin\Debug\CourseWork.exe
+D:\CourseWord_4Course\CourseWork\CourseWork\bin\Debug\CourseWork.pdb
+D:\CourseWord_4Course\CourseWork\CourseWork\bin\Debug\EntityFramework.dll
+D:\CourseWord_4Course\CourseWork\CourseWork\bin\Debug\EntityFramework.SqlServer.dll
+D:\CourseWord_4Course\CourseWork\CourseWork\bin\Debug\EntityFramework.xml
+D:\CourseWord_4Course\CourseWork\CourseWork\bin\Debug\EntityFramework.SqlServer.xml
+D:\CourseWord_4Course\CourseWork\CourseWork\obj\Debug\CourseWork.csprojAssemblyReference.cache
+D:\CourseWord_4Course\CourseWork\CourseWork\obj\Debug\CourseWork.MainForm.resources
+D:\CourseWord_4Course\CourseWork\CourseWork\obj\Debug\CourseWork.Properties.Resources.resources
+D:\CourseWord_4Course\CourseWork\CourseWork\obj\Debug\CourseWork.ReservationForm.resources
+D:\CourseWord_4Course\CourseWork\CourseWork\obj\Debug\CourseWork.SecondaryForm.resources
+D:\CourseWord_4Course\CourseWork\CourseWork\obj\Debug\CourseWork.TableInfoOnDateForm.resources
+D:\CourseWord_4Course\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.GenerateResource.cache
+D:\CourseWord_4Course\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.CoreCompileInputs.cache
+D:\CourseWord_4Course\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.CopyComplete
+D:\CourseWord_4Course\CourseWork\CourseWork\obj\Debug\CourseWork.exe
+D:\CourseWord_4Course\CourseWork\CourseWork\obj\Debug\CourseWork.pdb

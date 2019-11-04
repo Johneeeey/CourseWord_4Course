@@ -199,7 +199,7 @@
             this.Controls.Add(this.textBoxTableNum);
             this.Controls.Add(this.labelTableNum);
             this.Name = "SecondaryForm";
-            this.Text = "SecondaryForm";
+            this.Text = "Информация о столике";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReservations)).EndInit();
             this.ResumeLayout(false);

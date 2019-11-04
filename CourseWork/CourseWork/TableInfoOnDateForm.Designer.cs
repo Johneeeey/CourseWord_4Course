@@ -47,7 +47,7 @@
             this.ClientSize = new System.Drawing.Size(672, 106);
             this.Controls.Add(this.dataGridViewInfo);
             this.Name = "TableInfoOnDateForm";
-            this.Text = "TableInfoOnDateForm";
+            this.Text = "Информация о столике";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInfo)).EndInit();
             this.ResumeLayout(false);
 
